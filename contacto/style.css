@@ -55,9 +55,9 @@ header {
     height: 600px;
     background: #c21500;  
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, hsla(46, 100%, 50%, 0.575), hsla(6, 100%, 38%, 0.541)), url(../imagenes/abejafondo2y.jpg);
+    background: -webkit-linear-gradient(to right, hsla(46, 100%, 50%, 0.575), hsla(6, 100%, 38%, 0.541)), url(../assets/imagenes/contacto.jpg);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(46, 100%, 50%, 0.575), hsla(6, 100%, 38%, 0.541)), url(../imagenes/abejafondo2y.jpg);
+    background: linear-gradient(to right, hsla(46, 100%, 50%, 0.575), hsla(6, 100%, 38%, 0.541)), url(../assets/imagenes/contacto.jpg);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     background-attachment: fixed;
@@ -71,7 +71,7 @@ nav{
 }
 
 nav > a{
-    color: #fff;
+    color: rgb(255, 255, 255);
     font-weight: 300;
     text-decoration: none;
     margin-right: 10px;
@@ -108,127 +108,6 @@ header .textos-header{
     width: 100%;
 }
 
-/* About us */
-
-.contenedor-sobre-nosotros{
-   display: flex;
-   justify-content: space-evenly; 
-}
-
-.imagen-about-us{
-    width: 48%;
-}
-
-.sobre-nosotros .contenido-textos{
-    width: 48%;
-}
-
-.contenido-textos h3{
-    margin-bottom: 15px;
-}
-
-.contenido-textos h3 span{
-    background: #c5b806;
-    color: rgb(255, 255, 255);
-    border-radius: 50%;
-    display: inline-block;
-    text-align: center;
-    width: 30px;
-    height: 30%;
-    padding: 2px;
-    box-shadow: 0 0 6px rgba(0, 0 ,0, .5);
-    margin-right: 5px;
-}
-
-.contenido-textos p{
-    padding: 0px 0px 30px 15px;
-    font-weight: 300;
-    text-align: justify;
-}
-
-/* Galeria */
-
-.portafolio{
-    background: hsla(0, 0%, 63%, 0.451);
-}
-
-.galeria-port{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-.imagen-port{
-    width: 24%;
-    margin-bottom: 10px;
-    height: 200px;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    box-shadow: 0 0 6px 0 rgba(0, 0 ,0, .5);
-}
-
-.imagen-port > img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.hover-galeria{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    transform: scale(0); 
-    background: hsla(270, 3%, 29%, 0.7);
-    transition: transform .5s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.hover-galeria img{
-    width: 50px;
-}
-
-.hover-galeria p{
-    color: #fff;
-}
-
-.imagen-port:hover  .hover-galeria{
-    transform: scale(1);
-}
-
-/* Links */
-
-.cards{
-    display: flex;
-    justify-content: space-evenly;
-    padding: 0px 0 40px 0;
-}
-
-.cards .card{
-    background: #b6a50f;
-    display: flex;
-    width: 30%;
-    height: 200px;
-    align-items: center;
-    justify-content: space-evenly;
-    border-radius: 5px;
-    box-shadow: 0 0 6px 0 rgba(0, 0 ,0, 0.6);
-}
-
-.cards .card > .contenido-texto-card{
-    width: 60%;
-    color: #fff;
-}
-
-.cards .card .contenido-texto-card p{
-    font-weight: 300;
-    padding-top: 5px;
-}
 
 
 /* footer */
