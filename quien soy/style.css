@@ -107,3 +107,32 @@ header .textos-header{
     bottom: 0;
     width: 100%;
 }
+
+/* Links */
+
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0px 0 40px 0;
+}
+
+.cards .card{
+    background: #b6a50f;
+    display: flex;
+    width: 30%;
+    height: 200px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 rgba(0, 0 ,0, 0.6);
+}
+
+.cards .card > .contenido-texto-card{
+    width: 60%;
+    color: #fff;
+}
+
+.cards .card .contenido-texto-card p{
+    font-weight: 300;
+    padding-top: 5px;
+}
