@@ -24,28 +24,82 @@ body{
     padding: 30px 0 0px 0;
 }
 
-.site-navigation {
-    display: flex;
-    justify-content: flex-end;
-}
+/* Menu */ 
 
-.site-navigation a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: .5rem 2rem;
-    font-size: .85rem;
+*{
+    padding: 0;
+    margin: 0;
     text-decoration: none;
-    color: var(--color-white);
-    background-color: rgb(255, 255, 255);
-    border: 1px solid currentColor;
+    list-style: none;
+    box-sizing: border-box;
 }
 
-.site-navigation a:hover {
-    color: var(--color-dark);
-    background-color: var(--color-white);
-    border-color: var(--color-white);
+nav{
+    background: hsla(0, 0%, 25%, 0.637);
+    height: 80px;
+    width: 100%;
+}
+
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+}
+
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+li .active, li a:hover{
+    background: rgba(107, 107, 107, 0.616);
+    transition: .5s;
+}
+
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav.ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: hsla(0, 0%, 34%, 0.5);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
 }
 
 /* Header */
@@ -53,12 +107,14 @@ body{
 header {
     width: 100%;
     height: 600px;
-    background: #c21500;  
+
+    background: #52c234;  
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, hsla(46, 100%, 50%, 0.575), hsla(6, 100%, 38%, 0.541)), url(../assets/imagenes/contacto.jpg);
+    background: -webkit-linear-gradient(to right, #000000b6, #53c234b4), url(../assets/imagenes/portada-contacto.jpg);  
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(46, 100%, 50%, 0.575), hsla(6, 100%, 38%, 0.541)), url(../assets/imagenes/contacto.jpg);
+    background: linear-gradient(to right, #061700b7, #53c234b2), url(../assets/imagenes/portada-contacto.jpg); 
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -110,20 +166,6 @@ header .textos-header{
 
 /* Contacto */
 
-@font-face {
-  font-family: 'FontAwesome';
-  src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
-  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
-}
-
 :focus{
     outline: none;
 }
@@ -158,7 +200,7 @@ body{
     top: 0;
     left: 0;
 
-    background: #bbad2f;
+    background: #16701e98;
     opacity: 0.9;
 }
 
@@ -171,7 +213,7 @@ body{
     align-items: center;
     justify-content: center;
 
-    background-image: url('../fondo.jpg');
+    background-image: url('../assets/imagenes/fondo-contacto.jpg');
     background-size: cover;
     background-position: center center;
 
@@ -266,7 +308,7 @@ form.form_contact textarea{
 
 form.form_contact input[type="button"]{
     width: 180px;
-	background: #eccc40;
+	background: #36791cc9;
 	padding: 10px;
 	border: none;
 	border-radius: 25px;
@@ -282,71 +324,6 @@ form.form_contact input[type="button"]{
 
 form.form_contact input[type="button"]:hover{
     background: #686455;
-}
-
-/* Ventana de errores*/
-.modal_wrap{
-    width: 100%;
-    height: 100vh;
-    background: rgba(0,0,0,0.7);
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 3;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.mensaje_modal{
-    background: #fff;
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
-    width: 400px;
-    padding: 30px 20px 15px;
-}
-
-.mensaje_modal h3{
-    text-align: center;
-    font-family: 'Ubuntu';
-	font-size: 20px;
-	font-weight: 400;
-}
-
-.mensaje_modal h3:after{
-    content: '';
-	display: block;
-	width: 100%;
-	height: 1px;
-	background: #C5C5C5;
-	margin: 10px 0px 15px;
-}
-
-.mensaje_modal p{
-    font-size: 16px;
-    color: #606060;
-}
-
-.mensaje_modal p:before{
-    content: "\f00d";
-    font-family: FontAwesome;
-    display: inline-block;
-    color: #E25151;
-    margin-right: 8px;
-}
-
-#btnClose{
-    display: inline-block;
-	padding: 3px 10px;
-	margin-top: 10px;
-
-	background: #E25151;
-	color: #fff;
-	border: 2px solid #B14141;
-	cursor: pointer;
-
-	float: right;
 }
 
 
@@ -374,7 +351,7 @@ footer{
 
 .content-foo h4{
     color: #fff;
-    border-bottom: 3px solid #b99e00;
+    border-bottom: 3px solid #126e1a;
     padding-bottom: 5px;
     margin-bottom: 10px;
 }

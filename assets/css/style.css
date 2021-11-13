@@ -35,7 +35,7 @@ body{
 }
 
 nav{
-    background: #ffee007c;
+    background: hsla(0, 0%, 25%, 0.637);
     height: 80px;
     width: 100%;
 }
@@ -45,9 +45,6 @@ nav{
     padding: 20px 50px;
 }
 
-.logo{
-    height: 40px;
-}
 
 nav ul{
     float: right;
@@ -70,20 +67,6 @@ nav ul li a{
 li .active, li a:hover{
     background: rgba(107, 107, 107, 0.616);
     transition: .5s;
-}
-
-.checkbtn{
-    font-size: 30px;
-    color: rgb(255, 255, 255);
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
-}
-
-#check{
-    display: none;
 }
 
 @media (max-width: 952px){
@@ -117,13 +100,6 @@ li .active, li a:hover{
     nav ul li a{
         font-size: 20px;
     }
-    li a:hover, li a.active{
-        background: none;
-        color: rgb(255, 255, 255);
-    }
-    #check:checked ~ ul{
-        left: 0;
-    }
 }
 
 
@@ -132,12 +108,14 @@ li .active, li a:hover{
 header {
     width: 100%;
     height: 600px;
-    background: #c21500;  
+
+    background: #333333;  
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, hsla(46, 100%, 50%, 0.575), hsla(6, 100%, 38%, 0.541)), url(../imagenes/abejafondo2y.jpg);
+    background: -webkit-linear-gradient(to right, #dd18188e, #333333c0), url(../imagenes/portada-inicio.jpg);  
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(46, 100%, 50%, 0.575), hsla(6, 100%, 38%, 0.541)), url(../imagenes/abejafondo2y.jpg);
+    background: linear-gradient(to right, #dd18188a, #333333c2), url(../imagenes/portada-inicio.jpg); 
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -208,7 +186,7 @@ header .textos-header{
 }
 
 .contenido-textos h3 span{
-    background: #c5b806;
+    background: #b14b4b;
     color: rgb(255, 255, 255);
     border-radius: 50%;
     display: inline-block;
@@ -229,7 +207,7 @@ header .textos-header{
 /* Galeria */
 
 .portafolio{
-    background: hsla(0, 0%, 63%, 0.451);
+    background: #6161619c;
 }
 
 .galeria-port{
@@ -261,7 +239,7 @@ header .textos-header{
     height: 100%;
     top: 0;
     transform: scale(0); 
-    background: hsla(270, 3%, 29%, 0.7);
+    background: #b14b4be7;
     transition: transform .5s;
     display: flex;
     justify-content: center;
@@ -274,14 +252,14 @@ header .textos-header{
 }
 
 .hover-galeria p{
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
 
 .imagen-port:hover  .hover-galeria{
     transform: scale(1);
 }
 
-/* Links */
+/* tips */
 
 .cards{
     display: flex;
@@ -290,12 +268,12 @@ header .textos-header{
 }
 
 .cards .card{
-    background: #b6a50f;
+    background: #b14b4b;
     display: flex;
     width: 30%;
-    height: 200px;
+    height: 280px;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     border-radius: 5px;
     box-shadow: 0 0 6px 0 rgba(0, 0 ,0, 0.6);
 }
@@ -308,7 +286,8 @@ header .textos-header{
 
 .cards .card .contenido-texto-card p{
     font-weight: 300;
-    padding-top: 5px;
+    display: inline-block;
+    text-align: center;
 }
 
 
@@ -336,7 +315,7 @@ footer{
 
 .content-foo h4{
     color: #fff;
-    border-bottom: 3px solid #b99e00;
+    border-bottom: 3px solid #b14b4b;
     padding-bottom: 5px;
     margin-bottom: 10px;
 }
