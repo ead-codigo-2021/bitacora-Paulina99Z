@@ -176,7 +176,6 @@ header .textos-header{
 
 .card-container{
     display: flex;
-    width: 600px;
     height: auto;
     background: #fff;
     border-radius: 2px;
